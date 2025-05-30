@@ -24,8 +24,13 @@ import Reports from './HRM_Home/Reports'
 import ChartOfAccount from './Finance_Home/ChartOfAccount'
 
 import GeneralLedger from './Finance_Home/GeneralLedger';
+import AuditTrail from './Finance_Home/AuditTrail';
+import FinancialStatements from './Finance_Home/FinancialStatements';
+import TrialBalance from './Finance_Home/TrialBalance';
+import PostingPeriods from './Finance_Home/PostingPeriods';
+import JournalEntries from './Finance_Home/JournalEntries';
 
-import Axios1 from  './RND/Axios1'
+import Axios1 from './RND/Axios1'
 
 
 function AppRoutes() {
@@ -46,36 +51,41 @@ function AppRoutes() {
         <Route path="Reports" element={<Reports />} />
       </Route>
 
- 
+
       <Route path="/Finance" element={<FinanceLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="GeneralLedger" element={<GeneralLedger />} />
         <Route path="ChartOfAccount" element={<ChartOfAccount />} />
-         <Route path="Leaves" element={<Leaves />} />
+        <Route path="AuditTrail" element={<AuditTrail />} />
+        <Route path="FinancialStatements" element={<FinancialStatements />} />
+        <Route path="TrialBalance" element={<TrialBalance />} />
+        <Route path="PostingPeriods" element={<PostingPeriods />} />
+        <Route path="JournalEntries" element={<JournalEntries />} />
+        <Route path="Leaves" element={<Leaves />} />
       </Route>
 
       <Route path="/CRM" element={<CRMLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="Employees" element={<Employees />} />
         <Route path="Payroll" element={<Payroll />} />
-         <Route path="Leaves" element={<Leaves />} />
+        <Route path="Leaves" element={<Leaves />} />
       </Route>
 
 
 
- <Route path="/Inventory" element={<InventoryLayout />}>
+      <Route path="/Inventory" element={<InventoryLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="Employees" element={<Employees />} />
         <Route path="Payroll" element={<Payroll />} />
-         <Route path="Leaves" element={<Leaves />} />
+        <Route path="Leaves" element={<Leaves />} />
       </Route>
 
 
- <Route path="/SupplyChain" element={<SupplyChainLayout />}>
+      <Route path="/SupplyChain" element={<SupplyChainLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="Employees" element={<Employees />} />
         <Route path="Payroll" element={<Payroll />} />
-         <Route path="Leaves" element={<Leaves />} />
+        <Route path="Leaves" element={<Leaves />} />
       </Route>
 
 
@@ -83,7 +93,7 @@ function AppRoutes() {
         <Route index element={<HomeHRM />} />
         <Route path="Employees" element={<Employees />} />
         <Route path="Payroll" element={<Payroll />} />
-         <Route path="Leaves" element={<Leaves />} />
+        <Route path="Leaves" element={<Leaves />} />
       </Route>
 
 
