@@ -11,11 +11,11 @@ function NavbarHome() {
       {/* Nav links */}
       <Nav className="me-auto">
         <Nav.Link href="/Finance/GeneralLedger">General Ledger </Nav.Link>
-        <Nav.Link href="/HRM/Payroll">Accounts Payable</Nav.Link>
-        <Nav.Link href="/HRM/Leaves">Accounts Receivable </Nav.Link>
-        <Nav.Link href="/HRM/Leaves">Asset Management  </Nav.Link>
-        <Nav.Link href="/HRM/Leaves">Tax Management </Nav.Link>
-        <Nav.Link href="/HRM/Leaves">Financial Reporting </Nav.Link>
+        <Nav.Link href="/Finance/AccountsPayable">Accounts Payable</Nav.Link>
+        <Nav.Link href="/Finance/AccountsReceivable">Accounts Receivable </Nav.Link>
+        <Nav.Link href="/Finance/AssetManagement">Asset Management  </Nav.Link>
+        <Nav.Link href="/Finance/TaxManagement">Tax Management </Nav.Link>
+        <Nav.Link href="/Finance/FinancialReporting">Financial Reporting </Nav.Link>
         
       </Nav>
 

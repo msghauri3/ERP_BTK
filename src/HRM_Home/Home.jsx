@@ -4,7 +4,7 @@ import Sidebar from './SideBar'
 function Home() {
   return (
     <div>
-Home
+      Home
     </div>
   )
 }
