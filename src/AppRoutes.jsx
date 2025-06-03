@@ -14,14 +14,43 @@ import ProcurmentLayout from './Procurment_Home/Layout'
 
 
 // Pages
-import HomeERP from './ERP_Home/Home';
-import HomeHRM from './HRM_Home/Home';
-import Employees from './HRM_Home/Employees';
-import Payroll from './HRM_Home/Payroll';
-import Leaves from './HRM_Home/Leaves'
-import TaxSetup from './HRM_Home/TaxSetup'
-import Reports from './HRM_Home/Reports'
 
+import HomeERP from './ERP_Home/Home';
+
+
+
+
+// HR Module
+import HRHome from './HRM_Home/HRHome';
+// Employees
+import Employees from './HRM_Home/Employees/Employees';
+import AddEmployee from './HRM_Home/Employees/AddEmployee';
+import DeleteEmployee from './HRM_Home/Employees/DeleteEmployee';
+import DepartmentsDesignations from './HRM_Home/Employees/DepartmentsDesignations';
+import EmployeeDocuments from './HRM_Home/Employees/EmployeeDocuments';
+import EmployeeList from './HRM_Home/Employees/EmployeeList';
+import EmployeeProfile from './HRM_Home/Employees/EmployeeProfile';
+import UpdateEmployee from './HRM_Home/Employees/UpdateEmployee';
+// Payroll
+import Payroll from './HRM_Home/Payroll/Payroll';
+import BonusesAllowances from './HRM_Home/Payroll/BonusesAllowances';
+import GeneratePayroll from './HRM_Home/Payroll/GeneratePayroll';
+import OvertimeDeductions from './HRM_Home/Payroll/OvertimeDeductions';
+import PayrollReports from './HRM_Home/Payroll/PayrollReports';
+import PayrollSettings from './HRM_Home/Payroll/PayrollSettings';
+import SalaryHistory from './HRM_Home/Payroll/SalaryHistory';
+// Leaves
+import Leaves from './HRM_Home/Leaves/Leaves';
+import ApplyLeave from './HRM_Home/Leaves/ApplyLeave';
+import ApproveRejectLeave from './HRM_Home/Leaves/ApproveRejectLeave';
+import LeaveHistory from './HRM_Home/Leaves/LeaveHistory';
+import LeaveReports from './HRM_Home/Leaves/LeaveReports';
+import LeaveTypes from './HRM_Home/Leaves/LeaveTypes';
+
+
+
+
+// Finance Module
 import FinanceHome from './Finance_Home/FinanceHome';
 // General Ledeger
 import GeneralLedger from './Finance_Home/General_Ledger/GeneralLedger';
@@ -77,24 +106,55 @@ function AppRoutes() {
         <Route index element={<HomeERP />} />
       </Route>
 
+
+
+
+      {/* HR Module */}
       <Route path="/HRM" element={<HRMLayout />}>
-        <Route index element={<HomeHRM />} />
-        <Route path="Employees" element={<Employees />} />
-        <Route path="GeneratePayroll" element={<Payroll />} />
-        <Route path="Leaves" element={<Leaves />} />
-        <Route path="TaxSetup" element={<TaxSetup />} />
-        <Route path="Leaves" element={<Leaves />} />
-        <Route path="Payroll" element={<Payroll />} />
-        <Route path="Reports" element={<Reports />} />
+        <Route index element={<HRHome />} />
+      </Route>
+      {/* Employees */}
+      <Route path="/HRM/Employees" element={<HRMLayout />}>
+        <Route index element={<Employees />} />
+        <Route path="AddEmployee" element={<AddEmployee />} />
+        <Route path="DepartmentsDesignations" element={<DepartmentsDesignations />} />
+        <Route path="DeleteEmployee" element={<DeleteEmployee />} />
+        <Route path="EmployeeDocuments" element={<EmployeeDocuments />} />
+        <Route path="EmployeeList" element={<EmployeeList />} />
+        <Route path="EmployeeProfile" element={<EmployeeProfile />} />
+        <Route path="UpdateEmployee" element={<UpdateEmployee />} />
+      </Route>
+      {/* Payroll */}
+      <Route path="/HRM/Payroll" element={<HRMLayout />}>
+        <Route index element={<Payroll />} />
+        <Route path="BonusesAllowances" element={<BonusesAllowances />} />
+        <Route path="GeneratePayroll" element={<GeneratePayroll />} />
+        <Route path="OvertimeDeductions" element={<OvertimeDeductions />} />
+        <Route path="PayrollReports" element={<PayrollReports />} />
+        <Route path="PayrollSettings" element={<PayrollSettings />} />
+        <Route path="SalaryHistory" element={<SalaryHistory />} />
+      </Route>
+      {/* Leaves */}
+      <Route path="/HRM/Leaves" element={<HRMLayout />}>
+        <Route index element={<Leaves />} />
+        <Route path="ApplyLeave" element={<ApplyLeave />} />
+        <Route path="ApproveRejectLeave" element={<ApproveRejectLeave />} />
+        <Route path="LeaveHistory" element={<LeaveHistory />} />
+        <Route path="LeaveReports" element={<LeaveReports />} />
+        <Route path="LeaveTypes" element={<LeaveTypes />} />
       </Route>
 
 
+
+
+
+
+
+
+      {/* Finance Module */}
       <Route path="/Finance" element={<FinanceLayout />}>
         <Route index element={<FinanceHome />} />
-        <Route path="GeneralLedger" element={<GeneralLedger />} />
-        <Route path="AccountsPayable" element={<AccountsPayable />} />
       </Route>
-
       {/* General Ledger */}
       <Route path="/Finance/GeneralLedger" element={<FinanceLayout />}>
         <Route index element={<GeneralLedger />} />
@@ -154,37 +214,37 @@ function AppRoutes() {
       </Route>
 
 
-      <Route path="/CRM" element={<CRMLayout />}>
+      {/* <Route path="/CRM" element={<CRMLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="Employees" element={<Employees />} />
         <Route path="Payroll" element={<Payroll />} />
         <Route path="Leaves" element={<Leaves />} />
-      </Route>
+      </Route> */}
 
 
 
-      <Route path="/Inventory" element={<InventoryLayout />}>
+      {/* <Route path="/Inventory" element={<InventoryLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="Employees" element={<Employees />} />
         <Route path="Payroll" element={<Payroll />} />
         <Route path="Leaves" element={<Leaves />} />
-      </Route>
+      </Route> */}
 
 
-      <Route path="/SupplyChain" element={<SupplyChainLayout />}>
+      {/* <Route path="/SupplyChain" element={<SupplyChainLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="Employees" element={<Employees />} />
         <Route path="Payroll" element={<Payroll />} />
         <Route path="Leaves" element={<Leaves />} />
-      </Route>
+      </Route> */}
 
 
-      <Route path="/Procurement" element={<ProcurmentLayout />}>
+      {/* <Route path="/Procurement" element={<ProcurmentLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="Employees" element={<Employees />} />
         <Route path="Payroll" element={<Payroll />} />
         <Route path="Leaves" element={<Leaves />} />
-      </Route>
+      </Route> */}
 
 
 

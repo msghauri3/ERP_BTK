@@ -10,6 +10,7 @@ import SideBarAM from './Asset_Management/SideBarAM';
 import SideBarTM from './Tax_Management/SideBarTM';
 import SideBarFR from './Financial_Reporting/SideBarFR';
 import SideBarFinance from './SideBarFinance';
+// import './Sidebar.css';
 
 export default function FinanceLayout() {
 
@@ -38,13 +39,9 @@ export default function FinanceLayout() {
     <>
       <TopBarFinance />
       <NavBarFinance />
-      <div className="d-flex" style={{ minHeight: '100vh' }}>
-        {/* <SideBarHRM /> */}
+      <div className="d-flex" style={{ height: '88vh' }}>
         {SidebarComponent}
-
-
-
-        <div className="flex-grow-1 p-4" style={{ backgroundColor: '#f0f0f0' }}>
+        <div className="flex-grow-1 p-4 " >
           <Outlet />
         </div>
       </div>

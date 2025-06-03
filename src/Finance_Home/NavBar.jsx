@@ -2,6 +2,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navbar.css';   // Import the stylesheet
 
+
 function NavbarHome() {
   return (
     <Navbar className="custom-navbar" expand="lg" bg="light" variant="light">

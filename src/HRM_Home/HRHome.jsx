@@ -1,10 +1,10 @@
 import React from 'react'
-import Sidebar from './SideBar'
+import Sidebar from './Employees/SideBarEmployees'
 
 function Home() {
   return (
     <div>
-      Home
+     HR Home
     </div>
   )
 }
