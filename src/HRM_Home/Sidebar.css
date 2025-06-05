@@ -1,3 +1,15 @@
+.photo{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 70%;
+  width: 100%;
+  /* background-color: red; */
+   margin: 40px auto;
+  
+
+}
+
 .sidebar {
   background-color: #142141;
   height: 100vh;
