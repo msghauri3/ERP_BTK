@@ -3,9 +3,10 @@ import { Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import TopBarHRM from './TopBar';
 import NavBarHRM from './NavBar';
-import SideBarHRM from './SideBar';
-import SideBarPayroll from './SideBarPayroll';
-import SideBarLeaves from './SideBarLeaves'
+import SideBarHR from './SideBarHR';
+import SideBarEmployees from './Employees/SideBarEmployees';
+import SideBarPayroll from './Payroll/SideBarPayroll';
+import SideBarLeaves from './Leaves/SideBarLeaves';
 
 export default function HRMLayout() {
 
@@ -18,15 +19,17 @@ export default function HRMLayout() {
     SidebarComponent = <SideBarLeaves />;
   } else if (path.startsWith('/HRM/Payroll')) {
     SidebarComponent = <SideBarPayroll />;
+    } else if (path.startsWith('/HRM/Employees')) {
+    SidebarComponent = <SideBarEmployees />;
   } else {
-    SidebarComponent = <SideBarHRM />;
+    SidebarComponent = <SideBarHR />;
   }
 
   return (
     <>
       <TopBarHRM />
       <NavBarHRM />
-      <div className="d-flex" style={{ minHeight: '100vh' }}>
+      <div className="d-flex" style={{ height: '88vh' }}>
         {/* <SideBarHRM /> */}
         {SidebarComponent}
 
